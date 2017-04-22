@@ -1,4 +1,64 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="warehouse_robot">
+  <xacro:property name="PI" value="3.142" />
+
+  <xacro:macro name="wheel">
+    <inertial>
+      <origin xyz="1.404E-12 -1.4273E-06 -3.24719999991261E-12" rpy="0 0 0" />
+      <mass value="0.13417" />
+      <inertia ixx="0.000146905644650745" ixy="5.24655439786608E-15" ixz="1.58665244652452E-14" iyy="0.000279392456161737" iyz="-8.08703217025071E-15" izz="0.00014690564464536" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://warehouse_robot/meshes/wheel.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh filename="package://warehouse_robot/meshes/wheel.stl" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+
+  <link name="base_link">
+  <inertial>
+    <origin xyz="0.089651 0.014045 0.000106459999999999" rpy="0 0 0" />
+    <mass value="4.9511" />
+    <inertia ixx="0.144771700464571" ixy="-0.00641450872692838" ixz="-0.00058647494980373" iyy="0.232027279470688" iyz="-0.000146713403145161" izz="0.369859293842831" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="${PI/2} 0 0" />
+    <geometry>
+      <mesh filename="package://warehouse_robot/meshes/bot.stl" />
+    </geometry>
+    <material name="">
+      <color rgba="0.79216 0.81961 0.93333 0.1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://warehouse_robot/meshes/bot.stl" />
+    </geometry>
+  </collision>
+  </link>
+
+  <link name="wheel_1">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_1" type="continuous">
+    <origin xyz="0 0 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_1" />
+  </joint>
 
 </robot>

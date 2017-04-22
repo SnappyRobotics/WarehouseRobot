@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
 <launch>
-	<node name="rviz" pkg="rviz" required="true" type="rviz" />
-	<!--  args="-d $(find warehouseRobot)/config/config.rviz" -->
+	<node name="rviz" pkg="rviz" required="true" type="rviz" args="-d $(find warehouse_robot)/config/model.rviz" />
 </launch>
