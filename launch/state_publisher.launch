@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+	<param name="use_gui" value="true" />
+
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
 	<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
 	<node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map base_link 40" />

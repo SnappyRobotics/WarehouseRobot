@@ -56,8 +56,8 @@
   </link>
 
   <joint name="base_link_1" type="continuous">
-    <origin xyz="-0.26933 0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <origin xyz="-0.26933 0.212 0" rpy="-${PI/2} -${PI/2} 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_1" />
   </joint>
@@ -67,8 +67,8 @@
   </link>
 
   <joint name="base_link_2" type="continuous">
-    <origin xyz="-0.08 0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <origin xyz="-0.08 0.212 0" rpy="-${PI/2} -${PI/2} 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_2" />
   </joint>
@@ -79,8 +79,8 @@
   </link>
 
   <joint name="base_link_3" type="continuous">
-    <origin xyz="0.10934 0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <origin xyz="0.10934 0.212 0" rpy="-${PI/2} -${PI/2} 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_3" />
   </joint>
@@ -91,8 +91,8 @@
   </link>
 
   <joint name="base_link_4" type="continuous">
-    <origin xyz="0.29867 0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <origin xyz="0.29867 0.212 0" rpy="-${PI/2} -${PI/2} 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_4" />
   </joint>
@@ -104,7 +104,7 @@
 
   <joint name="base_link_5" type="continuous">
     <origin xyz="-0.26933 -0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_5" />
   </joint>
@@ -115,7 +115,7 @@
 
   <joint name="base_link_6" type="continuous">
     <origin xyz="-0.08 -0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_6" />
   </joint>
@@ -127,7 +127,7 @@
 
   <joint name="base_link_7" type="continuous">
     <origin xyz="0.10934 -0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_7" />
   </joint>
@@ -139,7 +139,7 @@
 
   <joint name="base_link_8" type="continuous">
     <origin xyz="0.29867 -0.212 0" rpy="${PI/2} 0 0" />
-    <axis xyz="1 0 0" />
+    <axis xyz="0 0 1" />
     <parent link="base_link" />
     <child link="wheel_8" />
   </joint>
