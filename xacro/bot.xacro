@@ -39,7 +39,7 @@
       <mesh filename="package://warehouse_robot/meshes/bot.stl" />
     </geometry>
     <material name="">
-      <color rgba="0.79216 0.81961 0.93333 0.1" />
+      <color rgba="0.79216 0.81961 0.93333 1" />
     </material>
   </visual>
   <collision>
@@ -50,15 +50,97 @@
   </collision>
   </link>
 
+  <!-- ===================== LEFT Wheels ============================= -->
   <link name="wheel_1">
   <xacro:wheel/>
   </link>
 
   <joint name="base_link_1" type="continuous">
-    <origin xyz="0 0 0" rpy="${PI/2} 0 0" />
+    <origin xyz="-0.26933 0.212 0" rpy="${PI/2} 0 0" />
     <axis xyz="1 0 0" />
     <parent link="base_link" />
     <child link="wheel_1" />
   </joint>
 
+  <link name="wheel_2">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_2" type="continuous">
+    <origin xyz="-0.08 0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_2" />
+  </joint>
+
+
+  <link name="wheel_3">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_3" type="continuous">
+    <origin xyz="0.10934 0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_3" />
+  </joint>
+
+
+  <link name="wheel_4">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_4" type="continuous">
+    <origin xyz="0.29867 0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_4" />
+  </joint>
+
+  <!-- ===================== RIGHT Wheels ============================= -->
+  <link name="wheel_5">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_5" type="continuous">
+    <origin xyz="-0.26933 -0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_5" />
+  </joint>
+
+  <link name="wheel_6">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_6" type="continuous">
+    <origin xyz="-0.08 -0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_6" />
+  </joint>
+
+
+  <link name="wheel_7">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_7" type="continuous">
+    <origin xyz="0.10934 -0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_7" />
+  </joint>
+
+
+  <link name="wheel_8">
+  <xacro:wheel/>
+  </link>
+
+  <joint name="base_link_8" type="continuous">
+    <origin xyz="0.29867 -0.212 0" rpy="${PI/2} 0 0" />
+    <axis xyz="1 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_8" />
+  </joint>
 </robot>
