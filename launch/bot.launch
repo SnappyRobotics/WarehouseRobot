@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find warehouse_robot)/xacro/bot.xacro'" />
+
+	<!-- State Publishers -->
+	<include file="$(find warehouse_robot)/launch/state_publisher.launch" />
+
+	<!-- RViz -->
+	<include file="$(find warehouse_robot)/launch/rviz.launch" />
+</launch>
