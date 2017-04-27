@@ -5,6 +5,10 @@
 	<!-- State Publishers -->
 	<include file="$(find warehouse_robot)/launch/state_publisher.launch" />
 
+	<!-- Odom calc -->
+	<node pkg="warehouse_robot" type="odom_calculator" name="odom_calculator" />
+
+
 	<!-- RViz -->
-	<include file="$(find warehouse_robot)/launch/rviz.launch" />
+	<!-- <include file="$(find warehouse_robot)/launch/rviz.launch" /> -->
 </launch>
