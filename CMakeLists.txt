@@ -23,3 +23,11 @@ include_directories(${catkin_INCLUDE_DIRS})
 
 add_executable(odom_calculator src/odom_calculator.cpp)
 target_link_libraries(odom_calculator ${catkin_LIBRARIES})
+
+
+install(TARGETS odom_calculator
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
